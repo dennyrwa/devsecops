@@ -1,27 +1,19 @@
 /**
  * Academic CV Publication Search & Client Interactivity
  * Author: H. Denny Rakhmad Widi Ashari, S.AP, M.E.
- * 
- * ==============================================================================
- * SIMULASI KERENTANAN DEVSECOPS - TAHAP 1 (DEMO)
- * ==============================================================================
- * 1. SECRET SCANNING TEST:
- *    Variabel di bawah sengaja menyimpan kunci API dummy bergaya Google API Key
- *    ("AIzaSyDummyKeyForDevSecOpsDemo12345") untuk memicu deteksi Trivy secret scanner.
- * 
- * 2. STATIC APPLICATION SECURITY TESTING (SAST / DOM XSS TEST):
- *    Fungsi renderSearchResults() secara sengaja memasukkan input teks pencarian
- *    langsung ke DOM melalui properti `innerHTML` tanpa proses sanitasi/HTML escaping.
- * ==============================================================================
  */
 
-// Skenario 3: Injeksi Secret Token Palsu
-const DEVSECOPS_DEMO_ANALYTICS_KEY = "AIzaSyDummyKeyForDevSecOpsDemo12345";
-const DEVSECOPS_STAGE = "Stage-1-Vulnerable-Simulation";
-
-console.log("[DevSecOps Demo] Inisialisasi Analytics dengan Key:", DEVSECOPS_DEMO_ANALYTICS_KEY);
-
 document.addEventListener("DOMContentLoaded", function () {
+  // Helper sanitasi HTML untuk keamanan DOM (Safe mode)
+  function escapeHtml(str) {
+    if (!str) return "";
+    return String(str)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
   // 1. Mobile Menu Toggle
   const toggleBtn = document.getElementById("mobile-menu-toggle");
   const siteNav = document.getElementById("site-nav");
@@ -143,15 +135,13 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    updateStatusBarVulnerable(currentQuery, count);
+    updateStatusBarSafe(currentQuery, count);
   }
 
   /**
-   * Skenario 3: Simulasi Celah Keamanan SAST (DOM-based XSS)
-   * Catatan Penting: innerHTML dipakai tanpa sanitasi pada `query` untuk mendemonstrasikan
-   * kerentanan injeksi script tak aman (Unsanitized DOM Sink).
+   * Sanitasi input query pengguna sebelum dirender ke DOM (Safe Mode)
    */
-  function updateStatusBarVulnerable(query, totalCount) {
+  function updateStatusBarSafe(query, totalCount) {
     if (!statusBar) return;
 
     if (!query && currentCategory === "all") {
@@ -159,11 +149,13 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    // KERENTANAN SENGAJA: query disisipkan langsung ke innerHTML tanpa sanitasi!
+    const safeQuery = escapeHtml(query);
+    const safeCategory = escapeHtml(currentCategory);
+
     statusBar.innerHTML = 
       '<div class="search-feedback-alert">' +
-        'Pencarian untuk: <strong>' + query + '</strong> ' +
-        (currentCategory !== "all" ? ' (Kategori: ' + currentCategory + ')' : '') +
+        'Pencarian untuk: <strong>' + safeQuery + '</strong> ' +
+        (currentCategory !== "all" ? ' (Kategori: ' + safeCategory + ')' : '') +
         ' &mdash; Ditemukan ' + totalCount + ' publikasi.' +
       '</div>';
   }
@@ -171,15 +163,14 @@ document.addEventListener("DOMContentLoaded", function () {
   function renderSearchResults(items, query) {
     if (!resultsContainer) return;
 
-    // Terapkan status bar yang rentan DOM XSS
-    updateStatusBarVulnerable(query, items.length);
+    updateStatusBarSafe(query, items.length);
 
     if (items.length === 0) {
-      // Menampilkan pesan kosong yang juga menggunakan innerHTML tak disanitasi
+      const safeQuery = escapeHtml(query);
       resultsContainer.innerHTML = 
         '<div class="search-empty-state" style="text-align: center; padding: 3rem 1rem; background: #fff; border: 1px dashed var(--color-border); border-radius: var(--radius-lg);">' +
           '<h4 style="color: var(--color-text-main); margin-bottom: 0.5rem;">Tidak ada publikasi ditemukan</h4>' +
-          '<p style="color: var(--color-text-muted);">Tidak ditemukan karya tulis yang cocok dengan kriteria kata kunci "' + query + '".</p>' +
+          '<p style="color: var(--color-text-muted);">Tidak ditemukan karya tulis yang cocok dengan kriteria kata kunci "' + safeQuery + '".</p>' +
         '</div>';
       return;
     }

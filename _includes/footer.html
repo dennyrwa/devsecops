@@ -36,16 +36,16 @@
         <h4 class="footer-subheading">Status Pipeline DevSecOps</h4>
         <div class="devsecops-card">
           <div class="devsecops-status">
-            <span class="status-indicator warning"></span>
-            <span>Simulasi Demo: Tahap 1 (Rentan)</span>
+            <span class="status-indicator success"></span>
+            <span>Status: Siap GitHub Pages (Safe Mode)</span>
           </div>
           <p class="devsecops-text">
-            Repositori ini dikonfigurasi dengan pemeriksaan otomatis <code>aquasecurity/trivy-action</code> untuk SCA, Secret Scanning, dan SAST.
+            Sistem berjalan dalam Jekyll Safe Mode dan telah diaudit dengan <code>aquasecurity/trivy-action</code> (SCA, Secret, Misconfig).
           </p>
           <div class="devsecops-chips">
-            <span class="sec-chip">SCA: Nokogiri 1.10.4 & Jekyll 3.8.5</span>
-            <span class="sec-chip">Secret: Hardcoded Fake API Key</span>
-            <span class="sec-chip">SAST: Search DOM XSS</span>
+            <span class="sec-chip clean">SCA: Minimal Gems (Jekyll 4.4+)</span>
+            <span class="sec-chip clean">Secret: Bersih / Zero Secrets</span>
+            <span class="sec-chip clean">SAST: Sanitized Input & DOM Safe</span>
           </div>
         </div>
       </div>

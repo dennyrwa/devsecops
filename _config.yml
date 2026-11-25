@@ -47,10 +47,3 @@ navigation:
   - title: "Kontak"
     url: "#kontak"
 
-# ==============================================================================
-# SIMULASI KERENTANAN DEVSECOPS - TAHAP 1 (DEMO SECRET SCANNING)
-# Perhatian: Kunci API di bawah sengaja disematkan untuk diuji oleh Trivy Secret Scanner
-# ==============================================================================
-analytics_api_key: "AIzaSyDummyKeyForDevSecOpsDemo12345"
-analytics_provider: "google-analytics-demo"
-demo_stage: "stage-1-vulnerable"

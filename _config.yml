@@ -1,0 +1,41 @@
+# Site Settings
+title: "H. Denny Rakhmad Widi Ashari, S.AP, M.E."
+tagline: "Dosen & Peneliti | Operations Management, Islamic Banking, Digital Banking"
+description: "Curriculum Vitae dan Profil Akademik H. Denny Rakhmad Widi Ashari, S.AP, M.E. - Dosen Universitas Nahdlatul Ulama Blitar."
+url: "https://masden.klikada.com"
+baseurl: ""
+
+# Author Information
+author:
+  name: "H. Denny Rakhmad Widi Ashari, S.AP, M.E."
+  email: "masden@klikada.com"
+  institution: "Universitas Nahdlatul Ulama Blitar"
+  location: "Blitar, Jawa Timur, Indonesia"
+  avatar: "assets/images/profile-placeholder.svg"
+
+# Build Settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Navigation Links
+navigation:
+  - title: "Beranda"
+    url: "#beranda"
+  - title: "Profil Indeksasi"
+    url: "#indeksasi"
+  - title: "Publikasi & Riset"
+    url: "#publikasi"
+  - title: "Pengalaman & Edukasi"
+    url: "#pengalaman"
+  - title: "Kontak"
+    url: "#kontak"
+
+# ==============================================================================
+# SIMULASI KERENTANAN DEVSECOPS - TAHAP 1 (DEMO SECRET SCANNING)
+# Perhatian: Kunci API di bawah sengaja disematkan untuk diuji oleh Trivy Secret Scanner
+# ==============================================================================
+analytics_api_key: "AIzaSyDummyKeyForDevSecOpsDemo12345"
+analytics_provider: "google-analytics-demo"
+demo_stage: "stage-1-vulnerable"

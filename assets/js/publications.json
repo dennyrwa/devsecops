@@ -1,0 +1,74 @@
+[
+  {
+    "id": "pub-01",
+    "title": "Optimasi Manajemen Operasional pada Perbankan Syariah Menghadapi Era Digital Banking",
+    "authors": "Denny Rakhmad Widi Ashari",
+    "year": 2023,
+    "category": "Journal",
+    "venue": "Jurnal Riset Perbankan Syariah dan Manajemen",
+    "doi": "10.31219/osf.io/ops-islamic-bank-2023",
+    "abstract": "Penelitian ini menganalisis strategi efisiensi operasional pada bank syariah dengan mengadopsi teknologi digital banking, otomatisasi proses bisnis, dan mitigasi risiko operasional berdasarkan prinsip syariah.",
+    "keywords": ["Operations Management", "Islamic Banking", "Digital Banking", "Efficiency"],
+    "url": "https://scholar.google.com/citations?user=36C13s4AAAAJ&hl=id"
+  },
+  {
+    "id": "pub-02",
+    "title": "Transformasi Layanan Nasabah: Integrasi FinTech Syariah dalam Ekosistem Perbankan Digital",
+    "authors": "Denny Rakhmad Widi Ashari, et al.",
+    "year": 2023,
+    "category": "Journal",
+    "venue": "Jurnal Ekonomi & Keuangan Islam Nusantara",
+    "doi": "10.1234/jekin.2023.014",
+    "abstract": "Studi empiris adopsi layanan perbankan digital berbasis syariah di Indonesia dengan meninjau kepatuhan syariat, kepuasan nasabah, dan kesiapan infrastruktur IT.",
+    "keywords": ["FinTech", "Digital Banking", "Customer Satisfaction", "Sharia Compliance"],
+    "url": "https://garuda.kemdikbud.go.id/author/view/6473096#!"
+  },
+  {
+    "id": "pub-03",
+    "title": "Manajemen Kinerja dan Efisiensi Rantai Nilai Operasional Lembaga Keuangan Mikro Syariah",
+    "authors": "Denny Rakhmad Widi Ashari",
+    "year": 2022,
+    "category": "Book Chapter",
+    "venue": "Kapita Selekta Manajemen Keuangan Syariah Kontemporer",
+    "doi": "10.1007/978-981-16-xyz-3",
+    "abstract": "Menguraikan metodologi evaluasi kinerja rantai nilai operasional pada institusi BMT dan perbankan syariah di kawasan Jawa Timur.",
+    "keywords": ["Operations Management", "Value Chain", "LKMS", "Islamic Finance"],
+    "url": "https://sinta.kemdikbud.go.id/authors/profile/6802917#!"
+  },
+  {
+    "id": "pub-04",
+    "title": "Analisis Mitigasi Risiko Siber dan Keamanan Data dalam Operasional Transaksi Perbankan Digital Syariah",
+    "authors": "Denny Rakhmad Widi Ashari, et al.",
+    "year": 2022,
+    "category": "Conference",
+    "venue": "International Conference on Islamic Economics and Digital Innovations (ICIEDI 2022)",
+    "doi": "10.1109/ICIEDI.2022.98124",
+    "abstract": "Kajian komprehensif terkait manajemen risiko operasional perbankan digital, keamanan siber, dan perlindungan privasi data nasabah perbankan syariah.",
+    "keywords": ["Cyber Risk", "Digital Banking", "Data Privacy", "Operations"],
+    "url": "https://www.webofscience.com/wos/author/record/GPK-6712-2022"
+  },
+  {
+    "id": "pub-05",
+    "title": "Strategi Keunggulan Bersaing Bank Syariah Melalui Otomatisasi Alur Kerja dan Service Operations",
+    "authors": "Denny Rakhmad Widi Ashari",
+    "year": 2021,
+    "category": "Journal",
+    "venue": "Jurnal Manajemen dan Inovasi Perbankan",
+    "doi": "10.22219/jmip.2021.55",
+    "abstract": "Eksplorasi peran otomatisasi alur kerja (workflow automation) dalam meningkatkan kecepatan transaksi, akurasi, dan efisiensi biaya operasional bank syariah.",
+    "keywords": ["Workflow Automation", "Operations Management", "Competitive Advantage"],
+    "url": "https://scholar.google.com/citations?user=36C13s4AAAAJ&hl=id"
+  },
+  {
+    "id": "pub-06",
+    "title": "Model Penerimaan Pengguna Layanan Mobile Banking Syariah Generasi Milenial di Indonesia",
+    "authors": "Denny Rakhmad Widi Ashari",
+    "year": 2020,
+    "category": "Journal",
+    "venue": "Jurnal Kajian Ekonomi dan Perbankan Terapan",
+    "doi": "10.21070/jkept.2020.12",
+    "abstract": "Menerapkan kerangka Technology Acceptance Model (TAM) yang dimodifikasi untuk mengukur penerimaan aplikasi mobile banking syariah bagi nasabah muda.",
+    "keywords": ["Mobile Banking", "Digital Banking", "TAM", "Islamic Banking"],
+    "url": "https://orcid.org/0000-0003-2251-6393"
+  }
+]

@@ -1,0 +1,93 @@
+name: Lean DevSecOps Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # ============================================================================
+  # TAHAP 1: SECURITY GATE (Trivy Security Scan)
+  # Menggunakan aquasecurity/trivy-action@master untuk memindai:
+  # - Software Composition Analysis / SCA (vuln: mendeteksi CVE pada Gemfile.lock)
+  # - Secret Scanning (secret: mendeteksi hardcoded API key / token)
+  # - Misconfiguration / SAST (misconfig: mendeteksi konfigurasi berisiko)
+  # Dengan severity 'CRITICAL,HIGH' dan exit-code '1', workflow akan otomatis
+  # menghentikan proses (Fail-Fast) jika ditemukan kerentanan berisiko tinggi.
+  # ============================================================================
+  security-scan:
+    name: "Trivy Security Gate (vuln, secret, misconfig)"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Run Trivy Scanner
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: 'fs'
+          scan-ref: '.'
+          scanners: 'vuln,secret,misconfig'
+          severity: 'CRITICAL,HIGH'
+          exit-code: '1'
+          format: 'table'
+          output: 'trivy-report.txt'
+
+      - name: Upload Trivy Security Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: trivy-security-report
+          path: trivy-report.txt
+
+  # ============================================================================
+  # TAHAP 2: BUILD & DEPLOY KE GITHUB PAGES
+  # Hanya dijalankan apabila tahap security-scan lolos (exit-code 0)
+  # dan commit berada di branch main.
+  # ============================================================================
+  build-and-deploy:
+    name: "Build & Deploy to GitHub Pages"
+    needs: security-scan
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build Jekyll Site
+        run: bundle exec jekyll build --destination ./_site
+        env:
+          JEKYLL_ENV: production
+
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,59 @@
+<footer id="kontak" class="site-footer">
+  <div class="container footer-container">
+    <div class="footer-grid">
+      <div class="footer-col footer-about">
+        <h3 class="footer-heading">{{ site.data.profiles.author.name }}</h3>
+        <p class="footer-bio">
+          {{ site.data.profiles.author.institution }}<br>
+          Bidang Keahlian: {{ site.data.profiles.author.expertise }}
+        </p>
+        <div class="footer-contacts">
+          <a href="mailto:{{ site.data.profiles.author.email }}" class="footer-contact-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            {{ site.data.profiles.author.email }}
+          </a>
+          <a href="{{ site.data.profiles.author.website }}" target="_blank" rel="noopener noreferrer" class="footer-contact-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            {{ site.data.profiles.author.website }}
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col footer-links">
+        <h4 class="footer-subheading">Indeksasi Cepat</h4>
+        <ul class="footer-link-list">
+          <li><a href="https://sinta.kemdikbud.go.id/authors/profile/6802917#!" target="_blank" rel="noopener noreferrer">SINTA (ID: 6802917)</a></li>
+          <li><a href="https://garuda.kemdikbud.go.id/author/view/6473096#!" target="_blank" rel="noopener noreferrer">Garuda (ID: 647389)</a></li>
+          <li><a href="https://scholar.google.com/citations?user=36C13s4AAAAJ&hl=id" target="_blank" rel="noopener noreferrer">Google Scholar Citations</a></li>
+          <li><a href="https://orcid.org/0000-0003-2251-6393" target="_blank" rel="noopener noreferrer">ORCID (0000-0003-2251-6393)</a></li>
+          <li><a href="https://www.webofscience.com/wos/author/record/GPK-6712-2022" target="_blank" rel="noopener noreferrer">Web of Science (GPK-6712-2022)</a></li>
+          <li><a href="https://colab.ws/researchers/R-3AE4E-0C776-QE46W" target="_blank" rel="noopener noreferrer">CoLab (R-3AE4E-0C776-QE46W)</a></li>
+          <li><a href="https://www.adscientificindex.com/scientist/denny-rakhmad-widi-ashari/6191323" target="_blank" rel="noopener noreferrer">AD Scientific Index (6191323)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-devsecops">
+        <h4 class="footer-subheading">Status Pipeline DevSecOps</h4>
+        <div class="devsecops-card">
+          <div class="devsecops-status">
+            <span class="status-indicator warning"></span>
+            <span>Simulasi Demo: Tahap 1 (Rentan)</span>
+          </div>
+          <p class="devsecops-text">
+            Repositori ini dikonfigurasi dengan pemeriksaan otomatis <code>aquasecurity/trivy-action</code> untuk SCA, Secret Scanning, dan SAST.
+          </p>
+          <div class="devsecops-chips">
+            <span class="sec-chip">SCA: Nokogiri 1.10.4 & Jekyll 3.8.5</span>
+            <span class="sec-chip">Secret: Hardcoded Fake API Key</span>
+            <span class="sec-chip">SAST: Search DOM XSS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {{ 'now' | date: "%Y" }} {{ site.data.profiles.author.name }} &bull; Universitas Nahdlatul Ulama Blitar. All rights reserved.</p>
+      <p class="footer-note">Ditenagai oleh Jekyll & GitHub Pages &bull; Terhubung dengan ekosistem <a href="https://masden.klikada.com" target="_blank" rel="noopener noreferrer">masden.klikada.com</a></p>
+    </div>
+  </div>
+</footer>

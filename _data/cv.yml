@@ -1,0 +1,43 @@
+# Curriculum Vitae Data: Pendidikan, Pengalaman, dan Pengajaran
+education:
+  - degree: "Magister Ekonomi (M.E.)"
+    field: "Ekonomi & Keuangan Perbankan Syariah"
+    institution: "Pascasarjana Perguruan Tinggi"
+    year: "2018 - 2020"
+    description: "Fokus penelitian tesis pada efisiensi operasional dan manajemen risiko perbankan syariah."
+  - degree: "Sarjana Administrasi Publik (S.AP)"
+    field: "Administrasi Publik / Manajemen Tata Kelola"
+    institution: "Fakultas Ilmu Administrasi"
+    year: "2013 - 2017"
+    description: "Fokus studi pada manajemen kebijakan publik, tata kelola organisasi, dan sistem operasi layanan publik."
+
+experience:
+  - role: "Dosen Tetap & Peneliti"
+    institution: "Universitas Nahdlatul Ulama Blitar"
+    period: "2020 - Sekarang"
+    location: "Blitar, Jawa Timur"
+    description: "Mengampu mata kuliah Manajemen Operasional, Perbankan Syariah, dan Digital Banking. Menjalankan riset aktif serta pengabdian kepada masyarakat dalam pengembangan UMKM dan literasi keuangan syariah."
+  - role: "Konsultan Riset & Inovasi Digital"
+    institution: "Klikada Digital Solution"
+    period: "2021 - Sekarang"
+    location: "Indonesia"
+    description: "Mengarahkan riset terapan transformasi operasional dan solusi digital untuk sektor pendidikan dan bisnis berbasis teknologi."
+
+teaching:
+  - course: "Manajemen Operasional (Operations Management)"
+    level: "Sarjana (S1)"
+    topics: "Desain sistem operasi, manajemen kualitas total (TQM), rantai pasok (SCM), tata kelola kapasitas dan proses."
+  - course: "Perbankan Syariah (Islamic Banking)"
+    level: "Sarjana (S1)"
+    topics: "Akad-akad muamalah perbankan syariah, operasional penghimpunan & penyaluran dana, analisis kelayakan pembiayaan."
+  - course: "Digital Banking & FinTech"
+    level: "Sarjana (S1)"
+    topics: "Ekosistem perbankan digital, integrasi API perbankan, kepatuhan keamanan siber, dan perilaku konsumen digital."
+
+skills:
+  - category: "Bidang Keahlian Utama"
+    items: ["Operations Management", "Islamic Banking", "Digital Banking", "Financial Technology (FinTech)", "Sharia Governance"]
+  - category: "Metodologi Riset"
+    items: ["Analisis Kualitatif & Kuantitatif", "Structural Equation Modeling (SEM)", "Technology Acceptance Model (TAM)", "Bibliometrik & Systematic Literature Review"]
+  - category: "Tools & Teknologi"
+    items: ["SPSS & SmartPLS", "VOSviewer", "Mendeley / Zotero", "Jekyll & Markdown", "Lean DevSecOps & Security Tools"]

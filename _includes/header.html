@@ -1,0 +1,30 @@
+<header class="site-header">
+  <div class="container header-container">
+    <a href="{{ '/' | relative_url }}" class="site-brand">
+      <span class="brand-avatar-badge">DR</span>
+      <div class="brand-text">
+        <span class="brand-name">H. Denny Rakhmad W. A.</span>
+        <span class="brand-role">UNU Blitar</span>
+      </div>
+    </a>
+
+    <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Buka Menu Navigasi" aria-expanded="false">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+
+    <nav class="site-nav" id="site-nav">
+      <ul class="nav-list">
+        {% for item in site.navigation %}
+        <li class="nav-item">
+          <a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+      <a href="mailto:{{ site.author.email }}" class="btn btn-primary btn-sm nav-cta">Hubungi Masden</a>
+    </nav>
+  </div>
+</header>

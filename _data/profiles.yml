@@ -1,0 +1,91 @@
+# Data Profil Resmi H. Denny Rakhmad Widi Ashari, S.AP, M.E.
+author:
+  name: "H. Denny Rakhmad Widi Ashari, S.AP, M.E."
+  honorific_prefix: "H."
+  first_name: "Denny Rakhmad Widi"
+  last_name: "Ashari"
+  academic_degrees: "S.AP, M.E."
+  position: "Dosen & Peneliti"
+  institution: "Universitas Nahdlatul Ulama Blitar"
+  faculty: "Fakultas Agama Islam / Program Studi Perbankan Syariah"
+  expertise: "Operations Management, Islamic Banking, dan Digital Banking"
+  email: "masden@klikada.com"
+  website: "https://masden.klikada.com"
+  bio: >
+    H. Denny Rakhmad Widi Ashari, S.AP, M.E. adalah dosen dan akademisi di Universitas Nahdlatul Ulama Blitar
+    dengan fokus riset pada Manajemen Operasional (Operations Management), Perbankan Syariah (Islamic Banking),
+    serta Transformasi Perbankan Digital (Digital Banking). Berpengalaman dalam riset tata kelola lembaga keuangan,
+    inovasi layanan fintech syariah, dan efisiensi rantai nilai operasional perbankan.
+
+# Daftar Seluruh Tautan Profil & Indeksasi Akademik Resmi
+# Catatan: Seluruh URL dan ID disesuaikan secara presisi sesuai data resmi.
+academic_profiles:
+  - id: "sinta"
+    name: "SINTA"
+    full_title: "Science and Technology Index (Kemdikbud)"
+    identifier: "6802917"
+    url: "https://sinta.kemdikbud.go.id/authors/profile/6802917#!"
+    badge_color: "#059669" # Emerald
+    tag: "Akreditasi Nasional"
+    description: "Database indeksasi publikasi ilmiah nasional terverifikasi Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi."
+    icon_type: "sinta"
+
+  - id: "garuda"
+    name: "Garuda"
+    full_title: "Garba Rujukan Digital (Kemdikbud)"
+    identifier: "647389"
+    url: "https://garuda.kemdikbud.go.id/author/view/6473096#!"
+    badge_color: "#dc2626" # Red
+    tag: "Portal Rujukan"
+    description: "Gerbang penelusuran referensi ilmiah, jurnal, dan prosiding nasional di Indonesia."
+    icon_type: "garuda"
+
+  - id: "scholar"
+    name: "Google Scholar"
+    full_title: "Google Scholar Citations"
+    identifier: "36C13s4AAAAJ"
+    url: "https://scholar.google.com/citations?user=36C13s4AAAAJ&hl=id"
+    badge_color: "#2563eb" # Blue
+    tag: "Sitasi Global"
+    description: "Rekam jejak sitasi artikel ilmiah, karya monograf, dan pengaruh sitasi internasional."
+    icon_type: "scholar"
+
+  - id: "orcid"
+    name: "ORCID"
+    full_title: "Open Researcher and Contributor ID"
+    identifier: "0000-0003-2251-6393"
+    url: "https://orcid.org/0000-0003-2251-6393"
+    badge_color: "#84cc16" # Lime Green
+    tag: "Pengenal Global Unik"
+    description: "Identitas digital permanen yang membedakan peneliti dalam ekosistem publikasi global."
+    icon_type: "orcid"
+
+  - id: "wos"
+    name: "Web of Science"
+    full_title: "Clarivate Web of Science ResearcherID"
+    identifier: "GPK-6712-2022"
+    url: "https://www.webofscience.com/wos/author/record/GPK-6712-2022"
+    badge_color: "#7c3aed" # Purple
+    tag: "Indeksasi Internasional"
+    description: "Indeksasi karya riset pada basis data internasional Clarivate Analytics Web of Science Core Collection."
+    icon_type: "wos"
+
+  - id: "colab"
+    name: "CoLab"
+    full_title: "Collaborative Research Network"
+    identifier: "R-3AE4E-0C776-QE46W"
+    url: "https://colab.ws/researchers/R-3AE4E-0C776-QE46W"
+    badge_color: "#0891b2" # Cyan
+    tag: "Jaringan Kolaborasi"
+    description: "Platform jaringan riset kolaboratif dan kemitraan keilmuan antar-peneliti global."
+    icon_type: "colab"
+
+  - id: "adscientific"
+    name: "AD Scientific Index"
+    full_title: "World Scientist and University Rankings"
+    identifier: "6191323"
+    url: "https://www.adscientificindex.com/scientist/denny-rakhmad-widi-ashari/6191323"
+    badge_color: "#d97706" # Amber
+    tag: "Peringkat Saintis Dunia"
+    description: "Sistem pemeringkatan produktivitas ilmiah dan indeks saintis berdasarkan total skor sitasi dan h-index."
+    icon_type: "adscientific"

@@ -1,0 +1,68 @@
+<section id="publikasi" class="section publications-section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">Karya Tulis & Riset</div>
+      <h2 class="section-title">Katalog Publikasi Ilmiah</h2>
+      <p class="section-description">
+        Daftar artikel jurnal, prosiding seminar, dan bab buku. Gunakan fitur pencarian interaktif di bawah untuk menyaring berdasarkan judul, topik, atau kata kunci.
+      </p>
+    </div>
+
+    <!-- Search Controls -->
+    <div class="search-widget">
+      <div class="search-input-wrapper">
+        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input 
+          type="text" 
+          id="publication-search-input" 
+          class="search-input" 
+          placeholder="Cari berdasarkan judul, topik (Operations, Islamic Banking, FinTech), atau tahun..." 
+          aria-label="Cari Publikasi"
+        >
+        <button id="search-clear-btn" class="search-clear-btn" style="display: none;" aria-label="Bersihkan pencarian">
+          &times;
+        </button>
+      </div>
+
+      <div class="filter-pills" id="category-filters">
+        <button class="filter-pill active" data-category="all">Semua Kategori</button>
+        <button class="filter-pill" data-category="Journal">Jurnal</button>
+        <button class="filter-pill" data-category="Book Chapter">Buku / Chapter</button>
+        <button class="filter-pill" data-category="Conference">Konferensi</button>
+      </div>
+    </div>
+
+    <!-- Live Search Feedback & Results (Handled by search.js) -->
+    <div id="search-status-bar" class="search-status-bar"></div>
+    <div id="search-results-container" class="publications-list">
+      <!-- Fallback Server-Side Rendered Publications List -->
+      {% for pub in site.data.publications %}
+      <article class="publication-card" data-category="{{ pub.category }}" data-year="{{ pub.year }}">
+        <div class="pub-header">
+          <span class="pub-category-badge pub-cat-{{ pub.category | slugify }}">{{ pub.category }}</span>
+          <span class="pub-year">{{ pub.year }}</span>
+        </div>
+        <h3 class="pub-title">
+          <a href="{{ pub.url }}" target="_blank" rel="noopener noreferrer">{{ pub.title }}</a>
+        </h3>
+        <p class="pub-authors"><strong>Penulis:</strong> {{ pub.authors }}</p>
+        <p class="pub-venue"><em>{{ pub.venue }}</em> {% if pub.doi %}&bull; DOI: <code>{{ pub.doi }}</code>{% endif %}</p>
+        <p class="pub-abstract">{{ pub.abstract }}</p>
+        <div class="pub-keywords">
+          {% for kw in pub.keywords %}
+          <span class="keyword-tag">{{ kw }}</span>
+          {% endfor %}
+        </div>
+        <div class="pub-actions">
+          <a href="{{ pub.url }}" target="_blank" rel="noopener noreferrer" class="btn-link">
+            Buka Sumber Publikasi &rarr;
+          </a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

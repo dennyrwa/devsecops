@@ -47,6 +47,19 @@ jobs:
           format: 'table'
           output: 'trivy-report.txt'
 
+      - name: Print Report to Console and Step Summary
+        if: always()
+        run: |
+          if [ -f trivy-report.txt ]; then
+            echo "### 🛡️ Trivy Security Scan Report" >> $GITHUB_STEP_SUMMARY
+            echo '```text' >> $GITHUB_STEP_SUMMARY
+            cat trivy-report.txt >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+            echo "==================== TRIVY SCAN RESULTS ===================="
+            cat trivy-report.txt
+            echo "============================================================"
+          fi
+
       - name: Upload Trivy Security Report
         if: always()
         uses: actions/upload-artifact@v4

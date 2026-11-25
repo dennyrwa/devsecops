@@ -45,8 +45,12 @@ document.addEventListener("DOMContentLoaded", function () {
   let currentCategory = "all";
   let currentQuery = "";
 
+  // Tentukan path dataset publikasi dengan mempertimbangkan baseurl GitHub Pages
+  const basePath = (window.SITE_BASEURL ? window.SITE_BASEURL.replace(/\/$/, '') : '');
+  const jsonUrl = basePath + '/assets/js/publications.json';
+
   // Ambil data publikasi dari file JSON
-  fetch("assets/js/publications.json")
+  fetch(jsonUrl)
     .then(function (res) {
       if (!res.ok) {
         throw new Error("Gagal memuat dataset publikasi JSON");

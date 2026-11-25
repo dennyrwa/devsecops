@@ -40,6 +40,11 @@
   <!-- Footer -->
   {% include footer.html %}
 
+  <!-- BaseURL context for client-side scripts -->
+  <script>
+    window.SITE_BASEURL = "{{ site.baseurl | default: '' }}";
+  </script>
+
   <!-- Client-side Interactive Search & Feature Script -->
   <script src="{{ '/assets/js/search.js' | relative_url }}" defer></script>
 </body>

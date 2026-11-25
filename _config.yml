@@ -13,11 +13,26 @@ author:
   location: "Blitar, Jawa Timur, Indonesia"
   avatar: "assets/images/profile-placeholder.svg"
 
-# Build Settings
+# Build Settings (GitHub Pages Safe Mode)
+safe: true
+strict_front_matter: false
+future: true
 markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: false
+
+# Berkas dan Direktori yang Dikecualikan dari Build Publikasi
+exclude:
+  - .github
+  - Gemfile
+  - Gemfile.lock
+  - docs
+  - vendor
+  - README.md
+  - LICENSE
+  - .git
+  - .gitignore
 
 # Navigation Links
 navigation:

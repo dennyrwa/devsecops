@@ -89,10 +89,11 @@ jobs:
           bundler-cache: true
 
       - name: Setup Pages
+        id: pages
         uses: actions/configure-pages@v5
 
       - name: Build Jekyll Site
-        run: bundle exec jekyll build --destination ./_site
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}" --destination ./_site
         env:
           JEKYLL_ENV: production
 
